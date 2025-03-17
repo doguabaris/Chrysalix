@@ -138,7 +138,7 @@ class CustomTransformer implements ITransformation
 Add your custom transformer to the engine:
 
 ```php
-$engine = new ChrysalixEngine([
+$engine = new Chrysalix([
     new CustomTransformer(),
 ]);
 ```

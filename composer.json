@@ -1,0 +1,66 @@
+{
+	"name": "chrysalix/chrysalix",
+	"description": "An open-source, lightweight PHP library for metamorphic code transformations.",
+	"type": "library",
+	"keywords": [
+		"php",
+		"metamorphic",
+		"code transformation",
+		"obfuscation",
+		"testing",
+		"chrysalix"
+	],
+	"authors": [
+		{
+			"name": "Doğu Abaris",
+			"email": "abaris@null.net"
+		}
+	],
+	"license": "MIT",
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.11",
+		"ockcyp/covers-validator": "v1.6.0",
+		"php-parallel-lint/php-console-highlighter": "1.0.0",
+		"php-parallel-lint/php-parallel-lint": "^1.4",
+		"phpunit/phpunit": "^9.6",
+		"phan/phan": "^5.3",
+		"spatie/phpunit-watcher": "^1.24",
+		"phpstan/phpstan": "^2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Chrysalix\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Chrysalix\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude vendor",
+			"vendor/bin/phpunit",
+			"covers-validator",
+			"phpcs -sp --cache",
+			"phan --allow-polyfill-parser --long-progress-bar",
+			"vendor/bin/phpstan analyse"
+		],
+		"fix": [
+			"phpcbf"
+		],
+		"phpstan": "vendor/bin/phpstan analyse",
+		"phan": "phan -d . --long-progress-bar",
+		"phpcs": "phpcs -sp --cache"
+	},
+	"config": {
+		"prepend-autoloader": false,
+		"optimize-autoloader": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

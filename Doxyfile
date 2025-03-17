@@ -1,0 +1,17 @@
+# Doxyfile <https://www.doxygen.nl/manual/config.html>
+PROJECT_NAME           = "Chrysalix"
+PROJECT_BRIEF          = "An open-source, lightweight PHP library for metamorphic code transformations."
+OUTPUT_DIRECTORY       = doc
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+QUIET                  = YES
+WARN_NO_PARAMDOC       = YES
+INPUT                  = README.md CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md src/
+FILE_PATTERNS          = *.php
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+HTML_DYNAMIC_SECTIONS  = YES
+GENERATE_TREEVIEW      = YES
+TREEVIEW_WIDTH         = 250
+GENERATE_LATEX         = NO
+GENERATE_TAGFILE       = doc/html/tagfile.xml

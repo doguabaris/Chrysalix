@@ -1,6 +1,6 @@
 # Chrysalix
 
-Chrysalix is an open-source, lightweight PHP library that performs metamorphic code transformations. It creates functionally equivalent variants of your PHP code by applying a series of customizable transformation rules. This makes it an excellent tool for testing, code obfuscation, and exploring alternative coding styles.
+An open-source PHP library that performs metamorphic code transformations. It creates functionally equivalent variants of your PHP code by applying a series of customizable transformation rules. This makes it an excellent tool for testing, code obfuscation, and exploring alternative coding styles.
 
 [![Latest Stable Version](https://poser.pugx.org/chrysalix/chrysalix/v?style=for-the-badge)](https://packagist.org/packages/chrysalix/chrysalix)
 [![Latest Unstable Version](https://poser.pugx.org/chrysalix/chrysalix/v/unstable?style=for-the-badge)](https://packagist.org/packages/chrysalix/chrysalix)
